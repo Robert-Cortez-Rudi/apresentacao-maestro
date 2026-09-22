@@ -13,7 +13,6 @@ import { bindKeyboard } from './core/keyboard.js';
 import { bindDeepLink } from './core/deep-link.js';
 
 import { mountChrome } from './components/chrome.js';
-import { SpeakerNotes } from './components/speaker-notes.js';
 import { Overview } from './components/overview.js';
 import { mountSelectableGroups } from './components/selectable-group.js';
 import { mountTabs } from './components/tabs.js';
@@ -57,9 +56,6 @@ async function boot() {
     nextButton: $('bNext'),
   });
 
-  const notes = new SpeakerNotes($('notes'), $('notesBody'));
-  notes.bind(deck);
-
   const overview = new Overview($('overview'), deck, SLIDES);
 
   // As interações são ligadas uma vez, no documento inteiro, porque todos os
@@ -72,7 +68,6 @@ async function boot() {
   mountJumpLinks(stage, deck);
 
   bindKeyboard(deck, {
-    toggleNotes: () => notes.toggle(),
     toggleOverview: () => overview.toggle(),
     toggleFullscreen: () => {
       if (document.fullscreenElement) document.exitFullscreen();

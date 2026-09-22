@@ -30,7 +30,6 @@ apps/deck/
     │   └── deep-link.js        # sincroniza com o #/N da URL
     ├── components/
     │   ├── chrome.js           # marcadores, progresso, rodapé
-    │   ├── speaker-notes.js    # painel do roteiro (N)
     │   ├── overview.js         # panorama (O)
     │   ├── selectable-group.js # "escolha uma opção, mostra o painel"
     │   ├── tabs.js             # abas dentro de um slide
@@ -65,10 +64,6 @@ Para um slide novo, crie o arquivo em `slides/` com esta forma:
   <div class="kicker">Ato 03 · seção</div>
   <h2>Título</h2>
   <p>Conteúdo.</p>
-
-  <div class="notes">
-    <p>O que falar aqui. Aparece ao apertar <b>N</b>.</p>
-  </div>
 </section>
 ```
 

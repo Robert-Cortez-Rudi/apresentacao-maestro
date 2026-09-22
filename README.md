@@ -50,7 +50,7 @@ npm test
 ```
 
 O teste sobe um servidor próprio e controla um Chromium de verdade: abre a
-apresentação, navega pelos slides, abre as notas e o panorama, clica nas
+apresentação, navega pelos slides, abre o panorama, clica nas
 interações e falha se aparecer qualquer erro de console. É o que evita
 descobrir na frente da turma que um botão parou de funcionar.
 
@@ -67,7 +67,7 @@ apps/deck/
 └── src/
     ├── main.js             # liga os módulos entre si
     ├── core/               # mecânica: navegação, carregamento, teclado
-    ├── components/         # interface: moldura, notas, panorama, interações
+    ├── components/         # interface: moldura, panorama, interações
     ├── data/               # conteúdo sequencial (as execuções do terminal)
     └── styles/             # CSS em camadas, dos tokens aos estados
 ```

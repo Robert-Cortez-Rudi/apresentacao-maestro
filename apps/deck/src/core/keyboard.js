@@ -8,7 +8,7 @@
 
 /**
  * @param {import('./presentation.js').Presentation} deck
- * @param {{toggleNotes: () => void, toggleFullscreen: () => void, toggleOverview: () => void}} actions
+ * @param {{toggleFullscreen: () => void, toggleOverview: () => void}} actions
  * @returns {() => void} remove os atalhos
  */
 export function bindKeyboard(deck, actions) {
@@ -25,7 +25,6 @@ export function bindKeyboard(deck, actions) {
     Backspace: () => deck.prev(),
     Home: () => deck.first(),
     End: () => deck.last(),
-    n: actions.toggleNotes,
     f: actions.toggleFullscreen,
     o: actions.toggleOverview,
     Escape: actions.toggleOverview,

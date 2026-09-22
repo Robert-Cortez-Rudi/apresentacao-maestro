@@ -109,13 +109,7 @@ check('End vai ao último', (await page.locator('#count').textContent()) === `${
 check('botão "próximo" inativo no fim', await page.locator('#bNext').isDisabled());
 await page.keyboard.press('Home');
 
-// --- notas e panorama -----------------------------------------------------
-await page.keyboard.press('n');
-check('painel de notas abre', await page.locator('#notes.on').isVisible());
-const notesText = (await page.locator('#notesBody').textContent()).trim();
-check('notas do slide preenchidas', notesText.length > 20, `${notesText.length} caracteres`);
-await page.keyboard.press('n');
-
+// --- panorama -------------------------------------------------------------
 await page.keyboard.press('o');
 check('panorama abre', await page.locator('#overview.on').isVisible());
 check('panorama lista os slides', (await page.locator('.ov-item').count()) === EXPECTED_SLIDES);
